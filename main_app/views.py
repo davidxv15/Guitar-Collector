@@ -1,8 +1,11 @@
 from django.shortcuts import render
+# importing guitar MODEL
+from .models import Guitar
 
 guitars = [
     {'model': 'Telecaster', 'manufacturer': 'Fender', 'description': 'solid-body electric guitar', 'strings': 6},
-    {'model': 'C5-CE', 'manufactuter': 'Cordoba', 'description': 'nylon-string electric classical guitar', 'strings': 6},
+    {'model': 'C5-CE', 'manufacturer': 'Cordoba', 'description': 'nylon-string electric classical guitar', 'strings': 6},
+    {'model': 'Banjo', 'manufacturer': 'Fender', 'description': '5-string banjo', 'strings': 5},
 ]
 # Create your views here.
 def home(request):
@@ -12,6 +15,7 @@ def about(request):
     return render(request, 'about.html')
 
 def guitars_index(request):
+    guitars = Guitar.objects.all()
     return render(request, 'guitars/index.html', {
         'guitars': guitars
     })
