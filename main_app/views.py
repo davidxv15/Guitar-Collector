@@ -2,6 +2,7 @@ from django.shortcuts import render
 # importing guitar MODEL
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Guitar
+from .forms import MaintenanceForm
 
 guitars = [
     {'model': 'Telecaster', 'manufacturer': 'Fender', 'description':'Solid-body electric guitar', 'strings': 6},
@@ -23,7 +24,8 @@ def guitars_index(request):
 
 def guitars_detail(request, guitar_id):
   guitar = Guitar.objects.get(id=guitar_id)
-  return render(request, 'guitars/detail.html', { 'guitar': guitar })
+  maintenance_form = MaintenanceForm()
+  return render(request, 'guitars/detail.html', { 'guitar': guitar, 'maintenance_form': maintenance_form })
 
 class GuitarCreate(CreateView):
     model = Guitar
