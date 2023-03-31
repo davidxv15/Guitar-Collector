@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Guitar Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ guitar.model }}</span>
+    <p>Manufacturer: {{ guitar.manufacturer }}</p>
+    <p>Description: {{ guitar.description|linebreaks }}</p>
+    {% if guitar.strings > 5 %}
+      <p>Strings: {{ guitar.strings }}</p>
+    {% else %}
+      <p>{{ guitar.strings }} strangs... that ain't no guitbox, hoss.</p>
+    {% endif %}
+  </div>
+  <div class="card-action">
+    <a href="{% url 'guitars_update' guitar.id %}">Edit</a>
+    <a href="{% url 'guitars_delete' guitar.id %}">Delete</a>
+  </div>
+</div>
+
+{% endblock %}

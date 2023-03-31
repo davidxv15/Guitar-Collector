@@ -4,6 +4,7 @@
 <h1>Guitar List</h1>
 
 {% for guitar in guitars %}
+<a href="{% url 'detail' guitar.id %}">
   <div class="card">
     <div class="card-content">
       <span class="card-title">{{ guitar.model }}</span>
@@ -12,10 +13,11 @@
       {% if guitar.strings > 5 %}
         <p>Strings: {{ guitar.strings }}</p>
       {% else %}
-        <p>Strings: {{ guitar.strings }}... Ain't no guitbox, hoss.</p>
+        <p>{{ guitar.strings }} strangs... that ain't no guitbox, hoss.</p>
       {% endif %}
     </div>
-  </div>
+</div>
+</a>
 {% endfor %}
 
 {% endblock %}
