@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Kalam', cursive;
+    background-image: url(https://images.unsplash.com/photo-1528459061998-56fd57ad86e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=370&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
   }
   
   main {
@@ -13,3 +20,20 @@ body {
     text-align: right;
   }
   
+  .patterns {
+        width: 100vw;
+        height: 100vw;
+    }
+     
+    .pt1 {
+        background: -moz-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), -moz-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), none;
+        background: -webkit-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), -webkit-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), none;
+        background: -ms-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), -ms-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), none;
+        background: -o-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), -o-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), none;
+        background: radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, #661133 10px, rgba(96, 16, 48, 0) 11px), none;
+        background-size: 20px 20px;
+    }
+
+    img {
+      display: ;
+    }

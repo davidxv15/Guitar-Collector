@@ -6,17 +6,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Guitar Collector&#9835; 🎸</title>
+  <title>Guitar Technician&#9835; 🎸</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-<body>
+<div class="patterns pt1"></div>
+<body class="green darken-3">
   <header class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper green darken-4">
         <ul>
-          <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Guitar Collector &#9835;</a></li>
+          <li><a href="{% url 'home' %}" class="left brand-logo; font-family: 'Kalam', cursive;">&nbsp;&nbsp;Guitar Technician &#9835;</a></li>
         </ul>
         <ul class="right">
           <li><a href="{% url 'about' %}">About</a></li>
@@ -32,8 +33,8 @@
     {% block content %}
     {% endblock %}
   </main>
-  <footer class="page-footer">
-    <div class="right">All Rights Reserved, &copy; 2023 Guitar Collector &nbsp;</div>
+  <footer class="page-footer green darken-4">
+    <div class="right yellow-text text-accent-3">All Rights Reserved, &copy; 2023 Guitar Technician &nbsp;</div>
   </footer>
 </body>
 </html>
